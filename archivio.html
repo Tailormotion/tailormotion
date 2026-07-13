@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#060607">
+<meta name="description" content="L'Archivio dei Tagli TailorMotion: i modelli di telo sartoriale disponibili, in sviluppo e su richiesta. Riserva il taglio per la tua auto.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23060607%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27Georgia%27 font-style=%27italic%27 font-size=%2718%27 fill=%27%23C9B47F%27 text-anchor=%27middle%27%3ET%3C/text%3E%3C/svg%3E">
+<title>Archivio dei Tagli — TAILORMOTION</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#060607;--graphite:#0E0F12;--platinum:#E8E6E1;
+  --smoke:#9A9891;--champagne:#C9B47F;--hairline:rgba(232,230,225,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:#060607;color-scheme:dark;scroll-behavior:smooth}
+body{background:#060607 !important;color:var(--platinum);font-family:'Manrope',sans-serif;
+  font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--champagne);color:var(--black)}
+.serif{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300}
+
+header{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;justify-content:space-between;
+  align-items:center;padding:28px 5vw;background:rgba(6,6,7,.72);backdrop-filter:blur(14px)}
+.logo{font-weight:500;letter-spacing:.42em;font-size:13px;display:flex;flex-direction:column;gap:5px;
+  color:var(--platinum);text-decoration:none}
+.logo .payoff{font-size:8px;letter-spacing:.34em;color:var(--champagne);font-weight:400}
+nav a{color:var(--smoke);text-decoration:none;font-size:11px;letter-spacing:.28em;font-weight:400;transition:color .3s}
+nav a:hover{color:var(--platinum)}
+.nav-cta{color:var(--platinum) !important;border:1px solid rgba(232,230,225,.25);
+  padding:12px 24px;border-radius:100px;transition:border-color .3s,color .3s !important}
+.nav-cta:hover{border-color:var(--champagne);color:var(--champagne) !important}
+
+main{max-width:1100px;margin:0 auto;padding:22vh 5vw 12vh}
+.eyebrow{font-size:10px;letter-spacing:.5em;color:var(--champagne);font-weight:500;
+  margin-bottom:40px;display:flex;align-items:center;gap:18px}
+.eyebrow::before{content:'';width:44px;height:1px;background:var(--champagne)}
+h1{font-weight:200;font-size:clamp(34px,6vw,72px);line-height:1.08;letter-spacing:.02em}
+h1 .serif{color:var(--champagne)}
+.intro{color:var(--smoke);margin:28px 0 0;max-width:560px;line-height:1.9;font-size:15px}
+
+.legend{display:flex;gap:28px;flex-wrap:wrap;margin:60px 0 26px;
+  font-size:10px;letter-spacing:.24em;color:var(--smoke)}
+.legend span::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:9px;vertical-align:1px}
+.legend .l-a::before{background:var(--champagne)}
+.legend .l-s::before{background:transparent;border:1px solid var(--champagne)}
+.legend .l-r::before{background:transparent;border:1px solid var(--smoke)}
+
+.arch{border-top:1px solid var(--hairline)}
+.row{display:grid;grid-template-columns:52px 1fr auto auto;gap:22px;align-items:center;
+  padding:30px 6px;border-bottom:1px solid var(--hairline);text-decoration:none;color:inherit;
+  transition:background .4s,padding-left .4s}
+.row:hover{background:var(--graphite);padding-left:16px}
+.row .n{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--champagne);font-size:16px}
+.row .name{font-size:15px;letter-spacing:.14em;font-weight:400}
+.row .name small{display:block;font-size:11px;letter-spacing:.1em;color:var(--smoke);margin-top:6px;font-weight:300}
+.row .price{font-size:12px;letter-spacing:.08em;color:var(--smoke);white-space:nowrap}
+.status{font-size:9px;letter-spacing:.26em;white-space:nowrap;padding:8px 14px;border-radius:100px;font-weight:500}
+.st-a{color:var(--black);background:var(--champagne)}
+.st-s{color:var(--champagne);border:1px solid rgba(201,180,127,.5)}
+.st-r{color:var(--smoke);border:1px solid rgba(154,152,145,.4)}
+@media(max-width:700px){
+  .row{grid-template-columns:34px 1fr auto;gap:14px}
+  .row .price{display:none}
+  :root{--smoke:#ADABA4}
+}
+
+.custom{margin-top:80px;border:1px solid var(--hairline);padding:56px 44px;text-align:center;
+  background:var(--graphite)}
+.custom h2{font-weight:200;font-size:clamp(24px,3.4vw,40px);line-height:1.2}
+.custom h2 .serif{color:var(--champagne)}
+.custom p{color:var(--smoke);max-width:480px;margin:20px auto 38px;line-height:1.9;font-size:14px}
+.cta{display:inline-block;color:var(--black);background:var(--platinum);text-decoration:none;
+  font-size:12px;letter-spacing:.26em;font-weight:500;padding:18px 40px;border-radius:100px;
+  transition:background .35s,transform .35s}
+.cta:hover{background:var(--champagne);transform:translateY(-2px)}
+
+footer{border-top:1px solid var(--hairline);padding:44px 5vw;display:flex;
+  justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--smoke);
+  font-size:11px;letter-spacing:.24em}
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+footer .f-links a{color:var(--smoke);text-decoration:none;font-size:10px;letter-spacing:.22em}footer .f-links a:hover{color:var(--champagne)}</style>
+<link rel="canonical" href="https://tailormotion.it/archivio.html">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="/">TAILORMOTION<span class="payoff">SARTORIA PER AUTOMOBILI</span></a>
+  <nav><a href="/#config" class="nav-cta">RISERVA IL TUO TAGLIO</a></nav>
+</header>
+
+<main>
+  <div class="eyebrow rv">ARCHIVIO DEI TAGLI</div>
+  <h1 class="rv">Ogni taglio ha un numero.<br>Ogni numero, <span class="serif">un'auto amata.</span></h1>
+  <p class="intro rv">L'archivio cresce con le richieste: i modelli più riservati entrano in sviluppo per primi. Se la tua auto non c'è, riservala — o rilevala con la Prova d'Abito, che veste qualsiasi auto esista.</p>
+
+  <div class="legend rv">
+    <span class="l-a">IN ARCHIVIO — pronto al taglio</span>
+    <span class="l-s">IN SVILUPPO — pattern in lavorazione</span>
+    <span class="l-r">SU RICHIESTA — entra con le riserve</span>
+  </div>
+
+  <div class="arch rv">
+        <a class="row" href="/?model=BMW%20Serie%201%20(F40)#config">
+      <span class="n">01</span>
+      <span class="name">BMW SERIE 1 — F40<small>2019 — oggi · hot hatch</small></span>
+      <span class="price">da 790€</span>
+      <span class="status st-s">IN SVILUPPO</span>
+    </a>
+    <a class="row" href="/?model=Alfa%20Romeo%20Giulia%20Quadrifoglio#config">
+      <span class="n">02</span>
+      <span class="name">ALFA ROMEO GIULIA QUADRIFOGLIO<small>2016 — oggi · berlina sportiva</small></span>
+      <span class="price">da 790€</span>
+      <span class="status st-s">IN SVILUPPO</span>
+    </a>
+    <a class="row" href="/taglio-porsche-911.html">
+      <span class="n">03</span>
+      <span class="name">PORSCHE 911 — 996 / 997<small>1997 — 2012 · coupé</small></span>
+      <span class="price">da 790€</span>
+      <span class="status st-s">IN SVILUPPO</span>
+    </a>
+    <a class="row" href="/?model=Volkswagen%20Golf%20GTI#config">
+      <span class="n">04</span>
+      <span class="name">VOLKSWAGEN GOLF GTI<small>tutte le generazioni · hot hatch</small></span>
+      <span class="price">da 790€</span>
+      <span class="status st-r">SU RICHIESTA</span>
+    </a>
+    <a class="row" href="/?model=Mazda%20MX-5#config">
+      <span class="n">05</span>
+      <span class="name">MAZDA MX-5<small>NA — ND · roadster</small></span>
+      <span class="price">da 790€</span>
+      <span class="status st-r">SU RICHIESTA</span>
+    </a>
+    <a class="row" href="/?model=BMW%20M3%20E46#config">
+      <span class="n">06</span>
+      <span class="name">BMW M3 E46<small>2000 — 2006 · coupé</small></span>
+      <span class="price">da 790€</span>
+      <span class="status st-r">SU RICHIESTA</span>
+    </a>
+    <a class="row" href="/?model=Abarth%20595#config">
+      <span class="n">07</span>
+      <span class="name">ABARTH 595<small>2008 — oggi · city sportiva</small></span>
+      <span class="price">da 790€</span>
+      <span class="status st-r">SU RICHIESTA</span>
+    </a>
+    <a class="row" href="/?model=Alpine%20A110#config">
+      <span class="n">08</span>
+      <span class="name">ALPINE A110<small>2017 — oggi · coupé</small></span>
+      <span class="price">da 790€</span>
+      <span class="status st-r">SU RICHIESTA</span>
+    </a>
+  </div>
+
+  <div class="custom rv">
+    <h2>La tua auto non è in archivio?<br><span class="serif">È il motivo per cui esiste la Prova d'Abito.</span></h2>
+    <p>Rileviamo in 3D la tua auto — qualsiasi essa sia, di qualsiasi anno, con qualsiasi modifica — e il taglio nasce dalle sue misure reali. Un esemplare unico, da 1.490€.</p>
+    <a class="cta" href="/?model=Prova%20d%27abito%20—%20auto%20fuori%20archivio#config">RISERVA LA PROVA D'ABITO</a>
+  </div>
+</main>
+
+<footer>
+  <div class="f-top" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:22px"><div>TAILORMOTION — MMXXVI</div><div>CINQUE TAGLI AL MESE · SU APPUNTAMENTO</div></div>
+  <div class="f-links" style="display:flex;gap:22px;flex-wrap:wrap"><a href="/">HOME</a><a href="/archivio.html">ARCHIVIO</a><a href="/domande.html">DOMANDE</a><a href="/diario.html">DIARIO</a><a href="/contatti.html">CONTATTI</a><a href="/privacy.html">PRIVACY</a><a href="/condizioni.html">CONDIZIONI</a></div>
+  <p style="margin-top:20px;font-size:9px;letter-spacing:.14em;line-height:1.8;opacity:.75">TAILORMOTION NON È AFFILIATA AI COSTRUTTORI AUTOMOBILISTICI CITATI. I NOMI DEI MODELLI SONO UTILIZZATI AL SOLO FINE DI IDENTIFICARE LA COMPATIBILITÀ DEL PRODOTTO.</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+}),{threshold:0.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
